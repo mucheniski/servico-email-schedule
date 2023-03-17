@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "417d3e54-40f7-477a-b19c-a202e22c1f5f",
+		"name": "envio-emails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/scheduleEmail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mucheniski@gmail.com\",\r\n    \"subject\": \"Teste\",\r\n    \"body\": \"vamos ver se da certo\",\r\n    \"dateTime\": \"2023-03-08T13:59:00\",\r\n    \"timeZone\": \"America/Sao_Paulo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/scheduleEmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scheduleEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/email/enviar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\": \"mucheniski@gmail.com\",\r\n    \"subject\": \"teste\",\r\n    \"text\": \"Vamos ver se deu certo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/email/enviar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"email",
+						"enviar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/email/enviar-template",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\": \"mucheniski@gmail.com\",\r\n    \"subject\": \"teste\",\r\n    \"text\": \"Vamos ver se deu certo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/email/enviar-template",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"email",
+						"enviar-template"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
